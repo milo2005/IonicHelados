@@ -20,7 +20,8 @@ export class AddHeladoPage {
   }
 
   save() {
-
+    this.service.data.push(this.helado);
+    this.navCtrl.pop();
   }
 
 }

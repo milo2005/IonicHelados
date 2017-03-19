@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, List } from 'ionic-angular';
+import { HeladosPage } from '../helados/helados';
+import { AddHeladoPage } from '../add-helado/add-helado';
+
 
 @Component({
   selector: 'page-home',
@@ -8,8 +11,22 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  mainContent:any = HeladosPage
+
   constructor(public navCtrl: NavController) {
-    
+
+  }
+
+  selectMenu(index:number){
+
+    if(index == 0)
+      this.mainContent = HeladosPage;
+    else
+      this.mainContent = AddHeladoPage;
+  }
+
+  logout(){
+    this.navCtrl.pop();
   }
 
 }
