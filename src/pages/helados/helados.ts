@@ -10,10 +10,14 @@ import { AddHeladoPage } from '../add-helado/add-helado';
 })
 export class HeladosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosData) { }
+  helados: Helado[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosData) { 
+    this.helados = [];
+  }
 
   ionViewDidLoad() {
-
+    this.helados = this.service.data;
   }
 
   goToAdd() {

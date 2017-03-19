@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { HeladosPage } from '../pages/helados/helados';
 import { AddHeladoPage } from '../pages/add-helado/add-helado';
+import { BebidasPage } from '../pages/bebidas/bebidas';
 
 import { HeladosData } from '../providers/helados-data';
 
@@ -15,7 +16,8 @@ import { HeladosData } from '../providers/helados-data';
     HomePage,
     LoginPage,
     HeladosPage,
-    AddHeladoPage
+    AddHeladoPage,
+    BebidasPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +28,8 @@ import { HeladosData } from '../providers/helados-data';
     HomePage,
     LoginPage,
     HeladosPage,
-    AddHeladoPage
+    AddHeladoPage,
+    BebidasPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, HeladosData]
 })
