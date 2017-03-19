@@ -16,7 +16,7 @@ export class HeladosPage {
 
   }
 
-  add() {
+  goToAdd() {
     this.navCtrl.push(AddHeladoPage)
   }
 
