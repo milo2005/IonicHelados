@@ -15,10 +15,14 @@ import { Helado, HeladosData } from '../../providers/helados-data';
 })
 export class AddHeladoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosData) { }
+  helado: Helado;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosData) { 
+    
+  }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddHeladoPage');
+
   }
 
 }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { Helado, HeladosData } from '../../providers/helados-data';
-
+import { AddHeladoPage } from '../add-helado/add-helado';
 
 @Component({
   selector: 'page-helados',
@@ -10,10 +10,14 @@ import { Helado, HeladosData } from '../../providers/helados-data';
 })
 export class HeladosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public service:HeladosData) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosData) { }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HeladosPage');
+
+  }
+
+  add() {
+    this.navCtrl.push(AddHeladoPage)
   }
 
 }
