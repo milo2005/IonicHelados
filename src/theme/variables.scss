@@ -24,11 +24,16 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
-  secondary:  #32db64,
+  primary:    #CDDC39,
+  secondary:  #E91E63,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  itemDark: (
+    base: transparent,
+    contrast: #fff
+  ),
+  labelDark: #eee
 );
 
 
@@ -49,7 +54,6 @@ $colors: (
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
 
 
 
