@@ -1,18 +1,38 @@
-<!--
-  Generated template for the AddHelado page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>addHelado</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Agregar Helado</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-row margin-bottom>
+
+    <ion-item ion-col col-12 col-md-6>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input name="nombre" type="text" required [(ngModel)]="helado.nombre"></ion-input>
+    </ion-item>
+
+    <ion-item ion-col col-12 col-md-6>
+      <ion-label floating>Procion</ion-label>
+      <ion-input name="porcion" type="number" required [(ngModel)]="helado.porcion"></ion-input>
+    </ion-item>
+
+    <ion-item ion-col col-12 col-md-6>
+      <ion-label floating>Precio</ion-label>
+      <ion-input name="precio" type="number" required [(ngModel)]="helado.precio"></ion-input>
+    </ion-item>
+
+    <ion-item ion-col col-12 col-md-6>
+      <ion-label floating>Imagen</ion-label>
+      <ion-input name="imagen" type="text" required [(ngModel)]="helado.imagen"></ion-input>
+    </ion-item>
+
+  </ion-row>
+
+  <button margin-top ion-button block full color="secondary" (click)="add()">Agregar</button>
 
 </ion-content>

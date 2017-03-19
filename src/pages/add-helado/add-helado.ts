@@ -1,22 +1,26 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-/*
-  Generated class for the AddHelado page.
+import { Helado, HeladosData } from '../../providers/helados-data';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-add-helado',
   templateUrl: 'add-helado.html'
 })
 export class AddHeladoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  helado: Helado;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosData) { 
+    this.helado =  new Helado()
+  }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddHeladoPage');
+    
+  }
+
+  save() {
+
   }
 
 }
