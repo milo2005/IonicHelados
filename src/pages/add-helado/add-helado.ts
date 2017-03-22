@@ -12,11 +12,12 @@ export class AddHeladoPage {
   helado: Helado;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public service: HeladosData) { 
-    this.helado =  new Helado()
+    this.helado =  new Helado();
   }
 
   save() {
-
+    this.service.data.push(this.helado);
+    this.navCtrl.pop();
   }
 
 }

@@ -16,12 +16,12 @@ export class HeladosPage {
     this.helados = [];
   }
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
     this.helados = this.service.data;
   }
 
   goToAdd() {
-    this.navCtrl.push(AddHeladoPage)
+    this.navCtrl.parent.push(AddHeladoPage)
   }
 
 }

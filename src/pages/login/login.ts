@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-//import { HomePage } from '../home/home';
-import { HeladosPage } from '../helados/helados';
+import { HomePage } from '../home/home';
+//import { HeladosPage } from '../helados/helados';
 
 @Component({
   selector: 'page-login',
@@ -17,7 +17,7 @@ export class LoginPage {
   }
 
   login() {
-    this.navCtrl.push(HeladosPage)
+    this.navCtrl.setRoot(HomePage);
   }
 
 }
