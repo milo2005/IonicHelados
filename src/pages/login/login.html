@@ -1,12 +1,23 @@
-<ion-header>
+<ion-content class="login-bg">
 
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
+  <div class="login-main">
+    <h1 class="login-title" text-right>Helados</h1>
 
-</ion-header>
+    <div class="login-inputs">
+      <ion-item color="itemLight">
+        <ion-label color="labelLight" floating>Usuario</ion-label>
+        <ion-input name="usuario" type="text"></ion-input>
+      </ion-item>
 
+      <ion-item color="itemLight">
+        <ion-label color="labelLight" floating>Password</ion-label>
+        <ion-input name="password" type="password"></ion-input>
+      </ion-item>
+    </div>
 
-<ion-content padding>
+    <button ion-button clear>Registrate</button>
+    <button ion-button block>Entrar</button>
+
+  </div>
 
 </ion-content>
