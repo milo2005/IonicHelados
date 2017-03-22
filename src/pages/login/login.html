@@ -1,23 +1,33 @@
 <ion-content class="login-bg">
-
-  <div class="login-main">
+  <div class="login-main" padding>
     <h1 class="login-title" text-right>Helados</h1>
 
     <div class="login-inputs">
-      <ion-item color="itemLight">
-        <ion-label color="labelLight" floating>Usuario</ion-label>
-        <ion-input name="usuario" type="text"></ion-input>
-      </ion-item>
-
-      <ion-item color="itemLight">
-        <ion-label color="labelLight" floating>Password</ion-label>
-        <ion-input name="password" type="password"></ion-input>
-      </ion-item>
+      <ion-row>
+        <ion-col col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8>
+          <ion-item color="itemLight">
+            <ion-label color="labelLight" floating>Usuario</ion-label>
+            <ion-input name="usuario" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8>
+          <ion-item color="itemLight">
+            <ion-label color="labelLight" floating>Password</ion-label>
+            <ion-input name="password" type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
     </div>
-
-    <button ion-button clear>Registrate</button>
-    <button ion-button block>Entrar</button>
-
+    <ion-row margin-bottom>
+      <button ion-col col-6 col-md-3 offset-md-6 col-lg-2 offset-lg-8 ion-button clear>Registrate</button>
+      <button ion-col col-6 col-md-3 ion-button col-lg-2 block (click)="login()">Entrar</button>
+    </ion-row>
   </div>
 
 </ion-content>
+
+
+
+
+
+

@@ -8,31 +8,32 @@
 
 
 <ion-content padding>
+  <form #form="ngForm">
+    <ion-row margin-bottom>
 
-  <ion-row margin-bottom>
 
-    <ion-item ion-col col-12 col-md-6>
-      <ion-label floating>Nombre</ion-label>
-      <ion-input name="nombre" type="text" required [(ngModel)]="helado.nombre"></ion-input>
-    </ion-item>
+      <ion-item ion-col col-12 col-md-6>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input name="nombre" type="text" required [(ngModel)]="helado.nombre"></ion-input>
+      </ion-item>
 
-    <ion-item ion-col col-12 col-md-6>
-      <ion-label floating>Procion</ion-label>
-      <ion-input name="porcion" type="number" required [(ngModel)]="helado.porcion"></ion-input>
-    </ion-item>
+      <ion-item ion-col col-12 col-md-6>
+        <ion-label floating>Procion</ion-label>
+        <ion-input name="porcion" min="1" type="number" required [(ngModel)]="helado.porcion"></ion-input>
+      </ion-item>
 
-    <ion-item ion-col col-12 col-md-6>
-      <ion-label floating>Precio</ion-label>
-      <ion-input name="precio" type="number" required [(ngModel)]="helado.precio"></ion-input>
-    </ion-item>
+      <ion-item ion-col col-12 col-md-6>
+        <ion-label floating>Precio</ion-label>
+        <ion-input name="precio" min="0" type="number" required [(ngModel)]="helado.precio"></ion-input>
+      </ion-item>
 
-    <ion-item ion-col col-12 col-md-6>
-      <ion-label floating>Imagen</ion-label>
-      <ion-input name="imagen" type="text" required [(ngModel)]="helado.imagen"></ion-input>
-    </ion-item>
+      <ion-item ion-col col-12 col-md-6>
+        <ion-label floating>Imagen</ion-label>
+        <ion-input name="imagen" type="text" required [(ngModel)]="helado.imagen"></ion-input>
+      </ion-item>
 
-  </ion-row>
-
-  <button margin-top ion-button block full color="secondary" (click)="save()">Agregar</button>
+    </ion-row>
+  </form>
+  <button margin-top ion-button block full color="secondary" (click)="save()" [disabled]="!form.valid">Agregar</button>
 
 </ion-content>

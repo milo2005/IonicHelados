@@ -1,12 +1,29 @@
 <ion-header>
-
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Helados</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <ion-row>
+
+    <ion-col *ngFor="let h of helados" col-12 col-md-6 col-lg-4>
+      <ion-card >
+        <img src="{{h.imagen}}">
+        <ion-card-content>
+          <ion-card-title>{{h.nombre}}</ion-card-title>
+          <p> <ion-icon name="md-people" margin-right></ion-icon> {{h.porcion}} </p>
+          <p> <ion-icon name="md-cash" margin-right></ion-icon> {{h.precio}} </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-fab right bottom  (click)="goToAdd()">
+    <button ion-fab icon-only color="secondary"> <ion-icon name="add"></ion-icon> </button>
+  </ion-fab>
 
 </ion-content>
