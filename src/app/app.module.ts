@@ -22,7 +22,8 @@ import { HeladosData } from '../providers/helados-data';
     BebidasPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

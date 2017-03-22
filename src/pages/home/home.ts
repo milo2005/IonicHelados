@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 import { NavController } from 'ionic-angular';
 import { HeladosPage } from '../helados/helados';
@@ -24,19 +25,21 @@ export class HomePage {
 
   mainContent: any;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public storage:Storage) {
     this.mainContent = HeladosPage;
+    storage.get("user").then( val =>{ console.log(val.user) });
   }
 
   selectMenu(index: number) {
-    if(index == 0){
+    if (index == 0) {
       this.mainContent = HeladosPage;
-    }else{
+    } else {
       this.mainContent = BebidasPage;
     }
   }
 
   logout() {
+    this.storage.set("logged", false);
     this.navCtrl.setRoot(LoginPage);
   }
 
